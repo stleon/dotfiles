@@ -1,0 +1,49 @@
+[alias]
+	st = status
+	unstage = reset HEAD
+	unmerge = merge --abort
+	last = log -1 HEAD
+	co = checkout
+	br = branch
+	ci = commit -v --status
+	cia = commit -av --status
+	ciam = commit -v --status --amend
+	bra = branch -av
+	pt = push origin --tags
+	sts = status -s
+	df = diff
+	dfs = diff --staged
+	dfc = diff --cached
+	lg = log --show-signature --abbrev-commit --stat --graph --decorate --all
+	rmt = remote -v
+	com = checkout master
+	cod = checkout develop
+	dfch = diff --check
+	sh = shortlog --no-merges
+	sth = stash --include-untracked
+	sthl = stash list
+	sthp = stash pop
+	stash-unapply = git stash show -p | git apply -R
+	sthb = stash branch test_branch
+	cln = clean -d -n
+	clnf = clean -d -f
+	cl = clone --recursiv
+	size = count-objects -v
+[color "status"]
+	branch = red black bold
+[core]
+	excludesfile = ~/.gitignore_global
+	whitespace = blank-at-eol
+[instaweb]
+	httpd = webrick
+[commit]
+	template = ~/.gitmessage
+[merge]
+	tool = opendiff
+	conflictstyle = diff3
+[diff]
+	submodule = log
+[status]
+	submodulesummary = 1
+[help]
+	autocorrect = 30
