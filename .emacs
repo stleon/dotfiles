@@ -24,3 +24,4 @@
 (setq org-agenda-files (list "~/org/work.org" 
                              "~/org/home.org"));
 ;; org mode ends
+(toggle-scroll-bar -1)
