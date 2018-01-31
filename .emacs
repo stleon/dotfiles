@@ -21,7 +21,8 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-(setq org-agenda-files (list "~/org/work.org" 
+(setq org-agenda-files (list "~/org/work.org"
                              "~/org/home.org"));
 ;; org mode ends
 (toggle-scroll-bar -1)
+(setq show-trailing-whitespace t)
