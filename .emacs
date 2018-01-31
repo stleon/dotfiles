@@ -26,3 +26,4 @@
 ;; org mode ends
 (toggle-scroll-bar -1)
 (setq show-trailing-whitespace t)
+(setq inhibit-startup-screen t)
