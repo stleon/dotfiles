@@ -37,3 +37,9 @@
 
 ;; Display the name of the current buffer in the title bar
 (setq frame-title-format "GNU Emacs: %b")
+
+;; Erlang
+(setq load-path (cons  "/usr/local/opt/erlang/lib/erlang/lib/tools-2.11/emacs" load-path))
+(setq erlang-root-dir "/usr/local/opt/erlang/lib/erlang")
+(setq exec-path (cons "/usr/local/opt/erlang/lib/erlang/bin" exec-path))
+(require 'erlang-start)
