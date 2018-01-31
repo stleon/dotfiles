@@ -27,3 +27,13 @@
 (toggle-scroll-bar -1)
 (setq show-trailing-whitespace t)
 (setq inhibit-startup-screen t)
+
+;; tabs
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+(defvaralias 'c-basic-offset 'tab-width)
+(setq-default tab-always-indent t)
+
+
+;; Display the name of the current buffer in the title bar
+(setq frame-title-format "GNU Emacs: %b")
