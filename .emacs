@@ -43,3 +43,7 @@
 (setq erlang-root-dir "/usr/local/opt/erlang/lib/erlang")
 (setq exec-path (cons "/usr/local/opt/erlang/lib/erlang/bin" exec-path))
 (require 'erlang-start)
+
+(global-auto-revert-mode 1)
+(setq backup-directory-alist
+          `(("." . ,(concat user-emacs-directory "backups"))))
