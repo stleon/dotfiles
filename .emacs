@@ -25,7 +25,10 @@
                              "~/org/home.org"));
 ;; org mode ends
 (toggle-scroll-bar -1)
-(setq show-trailing-whitespace t)
+
+;; whitespaces
+(setq-default show-trailing-whitespace t)
+
 (setq inhibit-startup-screen t)
 
 ;; tabs
@@ -57,4 +60,4 @@
 
 (global-auto-revert-mode 1)
 (setq backup-directory-alist
-          `(("." . ,(concat user-emacs-directory "backups"))))
+      `(("." . ,(concat user-emacs-directory "backups"))))
