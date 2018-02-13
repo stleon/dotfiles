@@ -61,3 +61,8 @@
 (global-auto-revert-mode 1)
 (setq backup-directory-alist
       `(("." . ,(concat user-emacs-directory "backups"))))
+
+
+(add-to-list 'load-path "/usr/local/share/distel/elisp")
+(require 'distel)
+(distel-setup)
