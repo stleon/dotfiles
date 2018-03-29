@@ -32,7 +32,9 @@
 (setq org-agenda-files (list "~/org/work.org"
                              "~/org/home.org"));
 ;; org mode ends
-(toggle-scroll-bar -1)
+
+;;(toggle-scroll-bar -1)
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; whitespaces
 (setq-default show-trailing-whitespace t)
