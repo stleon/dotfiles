@@ -14,7 +14,8 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (tango-dark)))
- '(package-selected-packages (quote (sr-speedbar wanderlust))))
+ '(package-selected-packages (quote (magit sr-speedbar wanderlust)))
+ '(speedbar-show-unknown-files t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -55,7 +56,7 @@
 (cond
  (
    (string-equal system-type "darwin")
-   (setq load-path (cons  "/usr/local/opt/erlang/lib/erlang/lib/tools-2.11/emacs" load-path))
+   (setq load-path (cons  "/usr/local/opt/erlang/lib/erlang/lib/tools-3.1/emacs" load-path))
    (setq erlang-root-dir "/usr/local/opt/erlang/lib/erlang")
    (setq exec-path (cons "/usr/local/opt/erlang/lib/erlang/bin" exec-path))
  )
@@ -121,6 +122,6 @@
 
 
 (require 'sr-speedbar)
-(custom-set-variables
- '(speedbar-show-unknown-files t)
-)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
