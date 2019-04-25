@@ -42,6 +42,8 @@
 
 (setq inhibit-startup-screen t)
 
+(column-number-mode 1)
+
 ;; tabs
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
@@ -56,9 +58,9 @@
 (cond
  (
    (string-equal system-type "darwin")
-   (setq load-path (cons  "/usr/local/opt/erlang/lib/erlang/lib/tools-3.1/emacs" load-path))
-   (setq erlang-root-dir "/usr/local/opt/erlang/lib/erlang")
-   (setq exec-path (cons "/usr/local/opt/erlang/lib/erlang/bin" exec-path))
+   (setq load-path (cons  "/usr/local/opt/erlang@19/lib/erlang/lib/tools-2.9.1/emacs" load-path))
+   (setq erlang-root-dir "/usr/local/opt/erlang@19/lib/erlang")
+   (setq exec-path (cons "/usr/local/opt/erlang@19/lib/erlang/bin" exec-path))
  )
  (
   (string-equal system-type "gnu/linux")
