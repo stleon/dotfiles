@@ -1,5 +1,5 @@
 init:
-	ln -s ${DOTS_PATH}/.emacs ~/.emacs
-	ln -s ${DOTS_PATH}/.gitconfig ~/.gitconfig
-	ln -s ${DOTS_PATH}/.gitignore_global ~/.gitignore_global
-	ln -s ${DOTS_PATH}/.gitmessage ~/.gitmessage
+	ln -s $(shell pwd)/.emacs ~/.emacs
+	ln -s $(shell pwd)/.gitconfig ~/.gitconfig
+	ln -s $(shell pwd)/.gitignore_global ~/.gitignore_global
+	ln -s $(shell pwd)/.gitmessage ~/.gitmessage
