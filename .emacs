@@ -5,7 +5,8 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(global-linum-mode 1)
+;;(global-linum-mode 1)
+(add-hook 'prog-mode-hook 'linum-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -14,7 +15,7 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (tango-dark)))
- '(package-selected-packages (quote (magit sr-speedbar wanderlust)))
+ '(package-selected-packages (quote (lua-mode go-mode magit sr-speedbar wanderlust)))
  '(speedbar-show-unknown-files t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -70,6 +71,9 @@
  )
 )
 (require 'erlang-start)
+
+;; Go
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 (global-auto-revert-mode 1)
 (setq backup-directory-alist
