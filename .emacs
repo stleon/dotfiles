@@ -5,8 +5,8 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;;(global-linum-mode 1)
-(add-hook 'prog-mode-hook 'linum-mode)
+(global-linum-mode 1)
+;;(add-hook 'prog-mode-hook 'linum-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -31,8 +31,9 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-(setq org-agenda-files (list "~/org/work.org"
-                             "~/org/home.org"));
+(setq calendar-week-start-day 1)
+(setq org-agenda-files (list "~/projects/home/org/work.org"
+                             "~/projects/home/org/home.org"));
 ;; org mode ends
 
 ;;(toggle-scroll-bar -1)
