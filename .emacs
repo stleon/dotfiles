@@ -25,6 +25,8 @@
  )
 (tool-bar-mode -1)
 
+(setq next-line-add-newlines t)
+
 ;; org mode starts
 ;; https://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
 (require 'org)
@@ -34,6 +36,9 @@
 (setq calendar-week-start-day 1)
 (setq org-agenda-files (list "~/projects/home/org/work.org"
                              "~/projects/home/org/home.org"));
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
 ;; org mode ends
 
 ;;(toggle-scroll-bar -1)
