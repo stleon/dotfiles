@@ -34,8 +34,11 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 (setq calendar-week-start-day 1)
-(setq org-agenda-files (list "~/projects/home/org/work.org"
-                             "~/projects/home/org/home.org"));
+;(setq org-agenda-files (list "~/projects/home/org/work.org"
+;                             "~/projects/home/org/home.org"));
+
+(setq org-agenda-files '("~/projects/home/org/home"
+                         "~/projects/home/org/work"));
 
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
