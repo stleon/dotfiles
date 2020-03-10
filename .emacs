@@ -15,7 +15,9 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (tango-dark)))
- '(package-selected-packages (quote (lua-mode go-mode magit sr-speedbar wanderlust)))
+ '(package-selected-packages
+   (quote
+    (plantuml-mode lua-mode go-mode magit sr-speedbar wanderlust)))
  '(speedbar-show-unknown-files t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -140,3 +142,7 @@
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; plantuml
+(setq plantuml-jar-path "/usr/local/bin/plantuml.jar")
+(setq plantuml-default-exec-mode 'jar)
