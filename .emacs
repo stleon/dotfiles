@@ -146,3 +146,7 @@
 ;; plantuml
 (setq plantuml-jar-path "/usr/local/bin/plantuml.jar")
 (setq plantuml-default-exec-mode 'jar)
+
+;; window resize
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
