@@ -70,13 +70,15 @@
 (cond
  (
    (string-equal system-type "darwin")
-   (setq load-path (cons  "/usr/local/opt/erlang@19/lib/erlang/lib/tools-2.9.1/emacs" load-path))
-   (setq load-path (cons  "/usr/local/lib/erlang/lib/tools-3.3/emacs" load-path))
+   ;(setq load-path (cons  "/usr/local/opt/erlang@19/lib/erlang/lib/tools-2.9.1/emacs" load-path))
+   (add-to-list
+    'load-path
+       (car (file-expand-wildcards "/usr/local/lib/erlang/lib/tools-*/emacs")))
 
-   (setq erlang-root-dir "/usr/local/opt/erlang@19/lib/erlang")
+   ;(setq erlang-root-dir "/usr/local/opt/erlang@19/lib/erlang")
    (setq erlang-root-dir "/usr/local/lib/erlang/lib/erlang")
 
-   (setq exec-path (cons "/usr/local/opt/erlang@19/lib/erlang/bin" exec-path))
+   ;(setq exec-path (cons "/usr/local/opt/erlang@19/lib/erlang/bin" exec-path))
    (setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
  )
  (
@@ -88,17 +90,18 @@
 )
 (require 'erlang-start)
 
+; distel
+(add-to-list 'load-path "/usr/local/share/distel/elisp")
+(require 'distel)
+(distel-setup)
+
+
 ;; Go
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 (global-auto-revert-mode 1)
 (setq backup-directory-alist
       `(("." . ,(concat user-emacs-directory "backups"))))
-
-
-(add-to-list 'load-path "/usr/local/share/distel/elisp")
-(require 'distel)
-(distel-setup)
 
 
 (require 'package)
