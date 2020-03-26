@@ -67,34 +67,21 @@
 (setq frame-title-format "GNU Emacs: %b")
 
 ;; Erlang
-(cond
- (
-   (string-equal system-type "darwin")
-   ;(setq load-path (cons  "/usr/local/opt/erlang@19/lib/erlang/lib/tools-2.9.1/emacs" load-path))
-   (add-to-list
-    'load-path
-       (car (file-expand-wildcards "/usr/local/lib/erlang/lib/tools-*/emacs")))
+(add-to-list
+ 'load-path
+ (car (file-expand-wildcards "/usr/local/lib/erlang/lib/tools-*/emacs")))
+(setq erlang-root-dir "/usr/local/lib/erlang/lib/erlang")
+(setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
+(setq erlang-man-root-dir "/usr/local/lib/erlang/man")
 
-   ;(setq erlang-root-dir "/usr/local/opt/erlang@19/lib/erlang")
-   (setq erlang-root-dir "/usr/local/lib/erlang/lib/erlang")
-
-   ;(setq exec-path (cons "/usr/local/opt/erlang@19/lib/erlang/bin" exec-path))
-   (setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
- )
- (
-  (string-equal system-type "gnu/linux")
-  (setq load-path (cons  "/usr/lib/erlang/lib/tools-2.10.1/emacs" load-path))
-  (setq erlang-root-dir "/usr/lib/erlang")
-  (setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
- )
-)
 (require 'erlang-start)
+(add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
+(add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
 
-; distel
+;distel
 (add-to-list 'load-path "/usr/local/share/distel/elisp")
 (require 'distel)
 (distel-setup)
-
 
 ;; Go
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
